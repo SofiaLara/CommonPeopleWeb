@@ -1,0 +1,27 @@
+/* We’ll use CSS Modules to style components. 
+This means that styles will be scoped to components, 
+which helps avoid class naming collisions between components.*/
+
+.container {
+    margin: auto;
+    max-width: 500px;
+    font-family: sans-serif;
+}
+
+.heading {
+    color: rebeccapurple;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav-link-item {
+    padding-right: 2rem;
+}
+
+.nav-link-text {
+    color: black;
+}
