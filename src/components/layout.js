@@ -6,7 +6,10 @@ import * as React from "react";
 // That way, when the user actually clicks on the link, the new page can load super quickly.
 // Use the Link component for linking between pages within your site.
 // For external links to pages not created by your Gatsby site, use the regular HTML < a > tag.
-import { Link } from "gatsby";
+
+// Gatsby uses graphql to pull data into the website.
+// To pull data into a component, we use the graphQL useStaticQuery hook.
+import { Link, useStaticQuery, graphql } from "gatsby";
 // when you use CSS Modules with Gatsby, you can have both! Your kebab-case class names in your .module.css
 // files will automatically be converted to camel -case variables that you can import in your.js files.
 import {
@@ -15,14 +18,27 @@ import {
   navLinks,
   navLinkItem,
   navLinkText,
+  siteTitle,
 } from "../styles/layout.module.css";
 
 // destructure the props object
 const Layout = ({ pageTitle, children }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `);
   return (
     // To apply classes to React components, we use the className prop.
     <div className={container}>
-      <title>{pageTitle}</title>
+      <title>
+        {pageTitle} | {data.site.siteMetadata.title}
+      </title>
+      <header className={siteTitle}>{data.site.siteMetadata.title}</header>
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>
@@ -33,6 +49,11 @@ const Layout = ({ pageTitle, children }) => {
           <li className={navLinkItem}>
             <Link to="/about" className={navLinkText}>
               About
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/blog" className={navLinkText}>
+              Blog
             </Link>
           </li>
         </ul>

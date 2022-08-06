@@ -25,3 +25,10 @@ which helps avoid class naming collisions between components.*/
 .nav-link-text {
     color: black;
 }
+
+.site-title {
+    font-size: 3rem;
+    color: gray;
+    font-weight: 700;
+    margin: 3rem 0;
+}
