@@ -1,4 +1,6 @@
 import * as React from "react";
+// importing special font from fontsource
+import "@fontsource/abril-fatface";
 // The Link component is an example of a pre-built component that you can use in your site.
 // In other words, the Link component is defined and maintained by another package
 // The Gatsby Link component provides a performance feature called preloading.
@@ -14,7 +16,6 @@ import { Link, useStaticQuery, graphql } from "gatsby";
 // files will automatically be converted to camel -case variables that you can import in your.js files.
 import {
   container,
-  heading,
   navLinks,
   navLinkItem,
   navLinkText,
@@ -35,8 +36,8 @@ const Layout = ({ pageTitle, children }) => {
   return (
     // To apply classes to React components, we use the className prop.
     <div className={container}>
-      <header className={siteTitle}>
-        {pageTitle} | {data.site.siteMetadata.title}
+      <header>
+        <title className={siteTitle}>CP | {data.site.siteMetadata.title}</title>
         <nav>
           <ul className={navLinks}>
             <li className={navLinkItem}>
@@ -67,11 +68,8 @@ const Layout = ({ pageTitle, children }) => {
           </ul>
         </nav>
       </header>
-      <main>
-        <h1 className={heading}>{pageTitle}</h1>
-        {children}
-      </main>
-      <footer>Common people all rigths reserved</footer>
+      <main>{children}</main>
+      <footer>{data.site.siteMetadata.title} all rigths reserved</footer>
     </div>
   );
 };

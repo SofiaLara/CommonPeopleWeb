@@ -1,0 +1,31 @@
+/* INDEX PAGE STYLES */
+.hero-banner {
+    display: flex;
+    margin: 0 1rem;
+}
+
+.hero-banner-title {
+    background-color: #2d235f;
+    font-family: "Abril Fatface";
+    color: #faf0dc;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-banner-title h2{
+    font-size: 5rem;
+    text-transform: lowercase;
+}
+
+.hero-banner-title p {
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-banner-img {
+    margin: 2rem 0;
+}

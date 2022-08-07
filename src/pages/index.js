@@ -182,16 +182,28 @@ import Layout from "../components/layout";
 import { graphql } from "gatsby";
 // Plugin for resposive images
 import { StaticImage } from "gatsby-plugin-image";
+import {
+  heroBanner,
+  heroBannerTitle,
+  heroBannerImg,
+} from "../styles/index.module.css";
 
 // Define the index component and export it so it's available to other components.
-export default function IndexPage() {
+export default function IndexPage({ data }) {
   return (
     <Layout pageTitle="Home Page">
-      <p>This is Hyde Farm community.</p>
-      <StaticImage
-        alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
-        src="../images/lar.jpg"
-      />
+      <div className={heroBanner}>
+        <div className={heroBannerTitle}>
+          <h2>{data.site.siteMetadata.title}</h2>
+          <p>We are the Hyde Farm community</p>
+        </div>
+        <StaticImage
+          alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
+          src="../images/balham-common.jpeg"
+          className={heroBannerImg}
+        />
+      </div>
+      <p>.</p>
     </Layout>
   );
 }
@@ -207,7 +219,7 @@ export const data = graphql`
   }
 `;
 
-// Adding some extra information to the head of the page with gatsby head API
+// Adding some extra information for SEO purposes to the head of the page using gatsby head API
 export const Head = ({ data }) => (
   <>
     <title>{data.site.siteMetadata.title}</title>

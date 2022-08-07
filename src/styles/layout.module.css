@@ -2,22 +2,42 @@
 This means that styles will be scoped to components, 
 which helps avoid class naming collisions between components.*/
 
-/* Main Container styles */
+/* LAYOUT STYLES */
+body {
+    margin: 0;
+    background-color: #faf0dc;
+}
+
 .container {
     margin: auto;
     max-width: 1200px;
     font-family: sans-serif;
+    background-color: #faf0dc;
 }
 
-.heading {
-    color: rebeccapurple;
-}
-
-nav {
+/* -- Header -- */
+header {
+    padding: 0 1rem;
+    position: sticky;
+    top: 0;
+    background-color: #faf0dc;
+    z-index: 10;
     font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#2d235f;
+}
+
+.site-title {
+    display: block;
+    font-size: 1rem;
+    font-family: "Abril Fatface";
+    font-weight: 700;
 }
 
 .nav-links {
+    font-family: "Abril Fatface";
     display: flex;
     list-style: none;
     padding-left: 0;
@@ -28,17 +48,11 @@ nav {
 }
 
 .nav-link-text {
-    color: black;
+    color: #2d235f;
+    text-decoration: none;
+    text-transform: lowercase;
 }
 
-.site-title {
-    font-size: 1rem;
-    color: gray;
-    font-weight: 700;
-    margin: 0 0 3rem 0;
-    position: sticky;
-    top: 0;
-    background-color: aqua;
-    z-index: 10;
-    width: 100%;
-}
+/* -- Main -- */
+
+/* -- Footer -- */
