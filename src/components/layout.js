@@ -35,33 +35,43 @@ const Layout = ({ pageTitle, children }) => {
   return (
     // To apply classes to React components, we use the className prop.
     <div className={container}>
-      <title>
+      <header className={siteTitle}>
         {pageTitle} | {data.site.siteMetadata.title}
-      </title>
-      <header className={siteTitle}>{data.site.siteMetadata.title}</header>
-      <nav>
-        <ul className={navLinks}>
-          <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
-              Home
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>
-              About
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/blog" className={navLinkText}>
-              Blog
-            </Link>
-          </li>
-        </ul>
-      </nav>
+        <nav>
+          <ul className={navLinks}>
+            <li className={navLinkItem}>
+              <Link to="/" className={navLinkText}>
+                Home
+              </Link>
+            </li>
+            <li className={navLinkItem}>
+              <Link to="/about" className={navLinkText}>
+                About
+              </Link>
+            </li>
+            <li className={navLinkItem}>
+              <Link to="/directory" className={navLinkText}>
+                Directory
+              </Link>
+            </li>
+            <li className={navLinkItem}>
+              <Link to="/events" className={navLinkText}>
+                Events
+              </Link>
+            </li>
+            <li className={navLinkItem}>
+              <Link to="/blog" className={navLinkText}>
+                Blog
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
       <main>
         <h1 className={heading}>{pageTitle}</h1>
         {children}
       </main>
+      <footer>Common people all rigths reserved</footer>
     </div>
   );
 };

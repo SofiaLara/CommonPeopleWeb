@@ -178,21 +178,39 @@
 // Import React
 import * as React from "react";
 import Layout from "../components/layout";
+// To pull data into a component, we use the graphQL useStaticQuery hook.
+import { graphql } from "gatsby";
 // Plugin for resposive images
 import { StaticImage } from "gatsby-plugin-image";
 
-// Define your component
-const IndexPage = () => {
+// Define the index component and export it so it's available to other components.
+export default function IndexPage() {
   return (
     <Layout pageTitle="Home Page">
-      <p>I'm making this by following the Gatsby Tutorial.</p>
+      <p>This is Hyde Farm community.</p>
       <StaticImage
         alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
         src="../images/lar.jpg"
       />
     </Layout>
   );
-};
+}
 
-// Export your component
-export default IndexPage;
+export const data = graphql`
+  query {
+    site {
+      siteMetadata {
+        description
+        title
+      }
+    }
+  }
+`;
+
+// Adding some extra information to the head of the page with gatsby head API
+export const Head = ({ data }) => (
+  <>
+    <title>{data.site.siteMetadata.title}</title>
+    <meta name="description" content={data.site.siteMetadata.description} />
+  </>
+);

@@ -12,6 +12,7 @@ module.exports = {
   siteMetadata: {
     title: `Common People`,
     siteUrl: `https://www.yourdomain.tld`,
+    description: "This is the Hyde Farm community in Balham website",
   },
   plugins: [
     "gatsby-plugin-image",
@@ -21,6 +22,12 @@ module.exports = {
       options: {
         name: `blog`,
         path: `${__dirname}/blog`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-html-attributes",
+      options: {
+        lang: "en",
       },
     },
     "gatsby-plugin-mdx",

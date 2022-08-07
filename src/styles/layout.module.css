@@ -2,14 +2,19 @@
 This means that styles will be scoped to components, 
 which helps avoid class naming collisions between components.*/
 
+/* Main Container styles */
 .container {
     margin: auto;
-    max-width: 500px;
+    max-width: 1200px;
     font-family: sans-serif;
 }
 
 .heading {
     color: rebeccapurple;
+}
+
+nav {
+    font-size: 1rem;
 }
 
 .nav-links {
@@ -27,8 +32,13 @@ which helps avoid class naming collisions between components.*/
 }
 
 .site-title {
-    font-size: 3rem;
+    font-size: 1rem;
     color: gray;
     font-weight: 700;
-    margin: 3rem 0;
+    margin: 0 0 3rem 0;
+    position: sticky;
+    top: 0;
+    background-color: aqua;
+    z-index: 10;
+    width: 100%;
 }
