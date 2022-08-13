@@ -18,6 +18,7 @@ body {
 /* -- Header -- */
 header {
     padding: 0 1rem;
+    margin: 1rem 0;
     position: sticky;
     top: 0;
     background-color: #faf0dc;
@@ -56,3 +57,12 @@ header {
 /* -- Main -- */
 
 /* -- Footer -- */
+
+/* SPINNER FOR LOADING */
+.spinner {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: inset -2px 0 0 2px #0bf;
+}

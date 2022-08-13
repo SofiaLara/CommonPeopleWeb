@@ -179,14 +179,21 @@
 import * as React from "react";
 import Layout from "../components/layout";
 // To pull data into a component, we use the graphQL useStaticQuery hook.
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 // Plugin for resposive images
 import { StaticImage } from "gatsby-plugin-image";
 import {
   heroBanner,
   heroBannerTitle,
   heroBannerImg,
+  heroSticker,
+  rotate,
+  welcomeContainer,
+  welcomeBanner,
+  welcomeBannerImg,
 } from "../styles/index.module.css";
+import Banner from "../images/banner1.png";
+import Sticker from "../images/icon.png";
 
 // Define the index component and export it so it's available to other components.
 export default function IndexPage({ data }) {
@@ -195,15 +202,51 @@ export default function IndexPage({ data }) {
       <div className={heroBanner}>
         <div className={heroBannerTitle}>
           <h2>{data.site.siteMetadata.title}</h2>
-          <p>We are the Hyde Farm community</p>
+          <p>We are the Hyde Farm community in Balham</p>
         </div>
         <StaticImage
           alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
           src="../images/balham-common.jpeg"
           className={heroBannerImg}
         />
+        <img
+          alt="sticker"
+          src={Sticker}
+          className={`${heroSticker} ${rotate}`}
+        />
       </div>
-      <p>.</p>
+      <div className={welcomeContainer}>
+        <div className={welcomeBanner}>
+          <Link to="/directory">
+            <img
+              alt="sticker banner 1"
+              src={Banner}
+              className={welcomeBannerImg}
+            />
+            <h2>Shops</h2>
+          </Link>
+        </div>
+        <div className={welcomeBanner}>
+          <Link to="/blog">
+            <img
+              alt="sticker banner 2"
+              src={Banner}
+              className={welcomeBannerImg}
+            />
+            <h2>News</h2>
+          </Link>
+        </div>
+        <div className={welcomeBanner}>
+          <Link to="/events">
+            <img
+              alt="sticker banner 3"
+              src={Banner}
+              className={welcomeBannerImg}
+            />
+            <h2>Events</h2>
+          </Link>
+        </div>
+      </div>
     </Layout>
   );
 }

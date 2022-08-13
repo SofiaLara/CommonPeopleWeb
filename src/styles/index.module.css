@@ -1,7 +1,10 @@
 /* INDEX PAGE STYLES */
+
+/* --- hero banner --- */
 .hero-banner {
     display: flex;
-    margin: 0 1rem;
+    margin: 0 1rem 2rem;
+    position: relative;
 }
 
 .hero-banner-title {
@@ -23,9 +26,47 @@
 
 .hero-banner-title p {
     font-size: 1.5rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Work sans', sans-serif;
 }
 
 .hero-banner-img {
     margin: 2rem 0;
+}
+
+.hero-sticker {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: -20px;
+    right: 35px;
+}
+
+/* --- main container --- */
+.welcome-container {
+    background-color: #ffffff;
+    display: flex;
+    padding: 1rem;
+}
+
+.welcome-banner {
+    padding: 1rem;
+    margin: 1rem;
+    width: calc(100% / 3);
+    text-align: center;
+}
+
+.welcome-banner-img {
+    width: 100%;
+    height: auto;
+}
+
+/* ENDLESS ROTATE */
+.rotate {
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(-360deg);
+    }
 }
