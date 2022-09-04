@@ -178,6 +178,7 @@
 // Import React
 import * as React from "react";
 import Layout from "../components/layout";
+import Button from "../components/button";
 // To pull data into a component, we use the graphQL useStaticQuery hook.
 import { Link, graphql } from "gatsby";
 // Plugin for resposive images
@@ -191,12 +192,20 @@ import {
   welcomeContainer,
   welcomeBanner,
   welcomeBannerImg,
+  aboutUsContainer,
+  aboutUsBtn,
 } from "../styles/index.module.css";
-import Banner from "../images/banner1.png";
+import ShopImg from "../images/shops.jpg";
+import EventImg from "../images/event.png";
+import NewsImg from "../images/news.jpg";
 import Sticker from "../images/icon.png";
 
 // Define the index component and export it so it's available to other components.
 export default function IndexPage({ data }) {
+  const btnText = "Learn more";
+  const btnClassName = aboutUsBtn;
+  const aboutLink = "/about";
+
   return (
     <Layout pageTitle="Home Page">
       <div className={heroBanner}>
@@ -220,32 +229,42 @@ export default function IndexPage({ data }) {
           <Link to="/directory">
             <img
               alt="sticker banner 1"
-              src={Banner}
+              src={ShopImg}
               className={welcomeBannerImg}
             />
-            <h2>Shops</h2>
-          </Link>
-        </div>
-        <div className={welcomeBanner}>
-          <Link to="/blog">
-            <img
-              alt="sticker banner 2"
-              src={Banner}
-              className={welcomeBannerImg}
-            />
-            <h2>News</h2>
+            <h2>SHOPS</h2>
           </Link>
         </div>
         <div className={welcomeBanner}>
           <Link to="/events">
             <img
-              alt="sticker banner 3"
-              src={Banner}
+              alt="sticker banner 2"
+              src={EventImg}
               className={welcomeBannerImg}
             />
-            <h2>Events</h2>
+            <h2>EVENTS</h2>
           </Link>
         </div>
+        <div className={welcomeBanner}>
+          <Link to="/blog">
+            <img
+              alt="sticker banner 3"
+              src={NewsImg}
+              className={welcomeBannerImg}
+            />
+            <h2>NEWS</h2>
+          </Link>
+        </div>
+      </div>
+      <div className={aboutUsContainer}>
+        <h2>ABOUT US</h2>
+        <p>
+          We are a small community of people that care a lot about each other.
+          <br />
+          You can find us in the common soaking up the sun, meeting up with
+          friends, walking our dogs or playing with our children.
+        </p>
+        <Button title={btnText} btnClass={btnClassName} btnLink={aboutLink} />
       </div>
     </Layout>
   );

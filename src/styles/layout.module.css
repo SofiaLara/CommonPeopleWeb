@@ -27,7 +27,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color:#2d235f;
+    color:#1e345e;
+    transition: background-color 0.3s;
+}
+
+.header-scroll {
+    background-color: #ffffff;
+    border-bottom: 1px solid #1e345e;
 }
 
 .site-title {

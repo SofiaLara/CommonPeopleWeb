@@ -8,7 +8,7 @@
 }
 
 .hero-banner-title {
-    background-color: #2d235f;
+    background-color: #1e345e;
     font-family: "Abril Fatface";
     color: #faf0dc;
     text-align: center;
@@ -44,6 +44,7 @@
 /* --- main container --- */
 .welcome-container {
     background-color: #ffffff;
+    color: #1e345e;
     display: flex;
     padding: 1rem;
 }
@@ -55,9 +56,37 @@
     text-align: center;
 }
 
+.welcome-banner:nth-child(2) {
+    align-self: center;
+}
+
+.welcome-banner a {
+    text-decoration: none;
+    color: #1e345e;
+}
+
 .welcome-banner-img {
     width: 100%;
     height: auto;
+}
+
+/* --- about us container --- */
+
+.about-us-container {
+    background-color: #1e345e;
+    color: #faf0dc;
+    padding: 1rem;
+    text-align: center;
+}
+
+.about-us-container p {
+    font-size: 1.3rem;
+    padding: 0 1rem;
+}
+
+.about-us-btn {
+    background-color: #faf0dc;
+    color: #1e345e;
 }
 
 /* ENDLESS ROTATE */

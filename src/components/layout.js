@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useEffect, useState } from "react";
 // importing special font from fontsource
 import "@fontsource/abril-fatface";
 // The Link component is an example of a pre-built component that you can use in your site.
@@ -20,10 +21,29 @@ import {
   navLinkItem,
   navLinkText,
   siteTitle,
+  headerScroll,
 } from "../styles/layout.module.css";
 
 // destructure the props object
 const Layout = ({ pageTitle, children }) => {
+  const [scrollColor, setColor] = useState();
+
+  useEffect(() => {
+    const handleScroll = (event) => {
+      if (window.scrollY > 100) {
+        setColor(true);
+      } else {
+        setColor(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -36,7 +56,7 @@ const Layout = ({ pageTitle, children }) => {
   return (
     // To apply classes to React components, we use the className prop.
     <div className={container}>
-      <header>
+      <header className={scrollColor ? headerScroll : ""}>
         <title className={siteTitle}>CP | {data.site.siteMetadata.title}</title>
         <nav>
           <ul className={navLinks}>
@@ -69,7 +89,12 @@ const Layout = ({ pageTitle, children }) => {
         </nav>
       </header>
       <main>{children}</main>
-      <footer>{data.site.siteMetadata.title} all rigths reserved</footer>
+      <footer>
+        {data.site.siteMetadata.title} all rigths reserved
+        <a href="https://www.freepik.com/vectors/vendor">
+          Vector created by pch.vector
+        </a>
+      </footer>
     </div>
   );
 };
