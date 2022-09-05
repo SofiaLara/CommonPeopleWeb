@@ -104,9 +104,6 @@ const Layout = ({ pageTitle, children }) => {
       <footer>
         {data.site.siteMetadata.title} 2022 - All rigths reserved
         <button onClick={handleToggle}>Like?{liked.number}</button>
-        <a href="https://www.freepik.com/vectors/vendor">
-          Vector created by pch.vector
-        </a>
       </footer>
     </div>
   );
