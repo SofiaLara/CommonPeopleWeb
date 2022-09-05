@@ -54,7 +54,7 @@ header {
 }
 
 .nav-link-text {
-    color: #2d235f;
+    color: #1e345e;
     text-decoration: none;
     text-transform: lowercase;
 }
@@ -62,7 +62,7 @@ header {
 /* -- Main -- */
 
 main {
-    color: #2d235f;
+    color: #1e345e;
 }
 
 .pages-hero-banner {
@@ -79,7 +79,7 @@ input {
 
 footer {
     background-color: #faf0dc;
-    color: #2d235f;
+    color: #1e345e;
     padding: 1rem;
     font-size: 1rem;
     text-align: center;

@@ -1,0 +1,41 @@
+Your name: Sofia Peyret
+
+Introduction: 
+My site is an old local newspaper. When the editor of the local funded newspaper decided to move abroad, the issues were no longer available to the community. 
+I took this opportunity to make the stories and information available online in the form of a website to everyone in my area as the person who was running the newspaper did before me.
+I'm hoping to bring local people together and know more and care about eachother.
+I have implemented a static website with a blog section. In the website you can mainly find latest event in the area, handy nearby shops and news and community stories.
+In the future I'm hoping to have more content and collaboration from other people.
+
+Inspiration:
+I was inspired by the local community newspaper that stopped being issued last year with the pandemic crisis.
+Also, I got creative inspiration from this charity website https://www.wagec.org.au/ and colours and graphic inspiratioon from this creative agency website https://www.theauthenticbrief.com/
+
+Accessibility:
+I decided to use gatsby framework because is current focus is on accessibility. In addition to making the interface compliant with the latest W3C standards, all the helpers alreqady implemented in Gatsby are accesible.
+Also, to make sure I'm following best accesibility practices, I added some plugins like eslint to help me fix some missing alt tags. Finally, I run Google Lighthouse on my browser to check my accesibility score, and I'm very pleased with the result!
+
+Usability:  
+The structure of the website is pretty simple, a menu that follows you while you scroll to make sure we can always reach the navigation, and also the addition of multiple entry points to the pages like the cards in the front page.
+On the blog posts, the user experience was enhaced with the back button, that takes you to the previous blog list, saving the user a click to the blog links.
+
+Learning:
+I had to learn two frameworks from scratch. One is React, and the other is gatsby.
+React is a JS library that provides a fast rendering of the DOM, and gatsby is built on react, so I could use both library and framework at the same time.
+It was quite challenging but really satisfing having completed my first website using mordern ES6 standards and frmeworks.
+Embedded in Gatsby is GraphQL which is a powerful api management tool. In this case we consume the data from the endpoint provided by gatsby but is a good Introduction to api management with GrqaphQL.
+
+Evaluation I:
+The search funcitonality is by far the best feature in the website. 
+I use some state management while fetching content from my data, so I did not only showed a list of information, but I can also search that list and learn the concept of state management which is quite powerful and interesting.
+
+Evaluation II: 
+I would break down the components even more and try to reuse the cards, for example. I didn't have enough time to pay attention to css and media queries so I would like to continue working on this live website until it looks and feels just right.
+I'm going to conduct a couple of user test to gain feedback and improve functinalities and presentation.
+
+Resources:
+https://www.gatsbyjs.com/docs/how-to/ - gatsby tutorial was very helpful setting up the blog and the general structure of the webste
+https://www.freepik.com/vectors/vendor - I took the illustrations from this platform.
+Deployment - my website is live for the community to enjoy in this link https://commonpeoplewebmain.gtsb.io/
+
+Appendices: Site map, wireframes and mock-ups

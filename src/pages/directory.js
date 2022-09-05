@@ -43,8 +43,8 @@ const DirectoryPage = () => {
   return (
     <Layout pageTitle="Directory">
       <StaticImage
-        alt="Balham common, trees, green grass and a row of Edwardian houses overlooking the common."
-        src="../images/hyde-farm.jpeg"
+        alt="Illustration of a family buying bread at a shop."
+        src="../images/shops-news.jpg"
         className={pagesHeroBanner}
       />
       <section className={directoryHeader}>

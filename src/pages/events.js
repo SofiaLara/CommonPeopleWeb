@@ -20,8 +20,8 @@ const EventsPage = () => {
   return (
     <Layout pageTitle="Events">
       <StaticImage
-        alt="Balham common, trees, green grass and a row of Edwardian houses overlooking the common."
-        src="../images/hyde-farm.jpeg"
+        alt="Illustration of a calendar"
+        src="../images/events-cal.jpg"
         className={pagesHeroBanner}
       />
       <section className={eventsHeader}>

@@ -10,8 +10,8 @@ const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="My Blog Posts">
       <StaticImage
-        alt="Balham common, trees, green grass and a row of Edwardian houses overlooking the common."
-        src="../images/hyde-farm.jpeg"
+        alt="Balham common, trees, green grass in the common."
+        src="../../images/blog-img.jpg"
         className={pagesHeroBanner}
       />
       <section className={blogHeader}>
