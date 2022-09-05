@@ -1,0 +1,29 @@
+section {
+    padding: 1rem;
+}
+
+.events-header {
+    text-align: center;
+    color: #fff;
+    background-color: #2d235f;
+}
+
+.events-grid {
+    text-align: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.event-card {
+    background-color: #ed7d2b;
+    flex-basis: calc(50% - 4rem);
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.event-btn {
+    background-color: #faf0dc;
+    color: #1e345e;
+}

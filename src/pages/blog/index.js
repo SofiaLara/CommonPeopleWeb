@@ -1,20 +1,34 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../../components/layout";
+import { pagesHeroBanner } from "../../styles/layout.module.css";
+import { blogHeader, blogList } from "../../styles/blog.module.css";
 
 // This data prop is coming from the GraphQL query response object
 const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="My Blog Posts">
-      {data.allMdx.nodes.map((node) => (
-        // we add the article semantic tag for blog posts
-        <article key={node.id}>
-          <h2>
-            <Link to={`/blog/${node.slug}`}>{node.frontmatter.title}</Link>
-          </h2>
-          <p>Posted: {node.frontmatter.date}</p>
-        </article>
-      ))}
+      <StaticImage
+        alt="Balham common, trees, green grass and a row of Edwardian houses overlooking the common."
+        src="../images/hyde-farm.jpeg"
+        className={pagesHeroBanner}
+      />
+      <section className={blogHeader}>
+        <h1>Welcome to the community blog</h1>
+        <p>We share thoughts, poems, news and curiosities.</p>
+      </section>
+      <section className={blogList}>
+        {data.allMdx.nodes.map((node) => (
+          // we add the article semantic tag for blog posts
+          <article key={node.id}>
+            <h2>
+              <Link to={`/blog/${node.slug}`}>{node.frontmatter.title}</Link>
+            </h2>
+            <p>Posted: {node.frontmatter.date}</p>
+          </article>
+        ))}
+      </section>
     </Layout>
   );
 };

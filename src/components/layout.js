@@ -26,6 +26,18 @@ import {
 
 // destructure the props object
 const Layout = ({ pageTitle, children }) => {
+  const [liked, setLike] = useState({
+    state: false,
+    number: "0",
+  });
+
+  const handleToggle = () => {
+    setLike((prevState) => ({
+      state: !prevState.state,
+      number: +!+prevState.number + "",
+    }));
+  };
+
   const [scrollColor, setColor] = useState();
 
   useEffect(() => {
@@ -90,7 +102,8 @@ const Layout = ({ pageTitle, children }) => {
       </header>
       <main>{children}</main>
       <footer>
-        {data.site.siteMetadata.title} all rigths reserved
+        {data.site.siteMetadata.title} 2022 - All rigths reserved
+        <button onClick={handleToggle}>Like?{liked.number}</button>
         <a href="https://www.freepik.com/vectors/vendor">
           Vector created by pch.vector
         </a>

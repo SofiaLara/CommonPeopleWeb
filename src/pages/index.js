@@ -198,7 +198,7 @@ import {
 import ShopImg from "../images/shops.jpg";
 import EventImg from "../images/event.png";
 import NewsImg from "../images/news.jpg";
-import Sticker from "../images/icon.png";
+import Sticker from "../images/balham-under.png";
 
 // Define the index component and export it so it's available to other components.
 export default function IndexPage({ data }) {

@@ -1,0 +1,20 @@
+section {
+    padding: 1rem;
+}
+
+.blog-header {
+    text-align: center;
+    color: #fff;
+    background-color: #2d235f;
+}
+
+.blog-list {
+    background-color: #ed7d2b;
+}
+
+article {
+    background-color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+    margin: 1rem;
+}

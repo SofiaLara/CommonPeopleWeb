@@ -1,0 +1,14 @@
+section {
+    padding: 1rem;
+}
+
+.directory-header {
+    text-align: center;
+    color: #fff;
+    background-color: #2d235f;
+}
+
+.directory-search {
+    text-align: center;
+    background-color: #fff;
+}

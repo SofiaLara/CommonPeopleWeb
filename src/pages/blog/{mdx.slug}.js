@@ -6,7 +6,7 @@
 // Query variables can only be used in page queries.
 
 import * as React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 // MDXRenderer is a component included in the gatsby-plugin-mdx plugin that you can use to render the contents of a .mdx file.
 // So we can render the body of the post
 import { MDXRenderer } from "gatsby-plugin-mdx";
@@ -18,9 +18,13 @@ const BlogPost = ({ data }) => {
   const image = getImage(data.mdx.frontmatter.hero_image);
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
-      <p>{data.mdx.frontmatter.date}</p>
-      <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
-      <MDXRenderer>{data.mdx.body}</MDXRenderer>
+      <article>
+        <p>{data.mdx.frontmatter.date}</p>
+        <h1>{data.mdx.frontmatter.title}</h1>
+        <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
+        <MDXRenderer>{data.mdx.body}</MDXRenderer>
+        <Link to="/blog">Back to Blog</Link>
+      </article>
     </Layout>
   );
 };

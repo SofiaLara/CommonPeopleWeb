@@ -1,6 +1,7 @@
 .accordion {
-    max-width: 600px;
+    width: 95%;
     margin: 0 auto;
+
 }
 
 .accordion-title {
@@ -8,11 +9,12 @@
     flex-direction: row;
     justify-content: space-between;
     cursor: pointer;
-    background-color: #21aeca;
+    background-color: #2d235f;
+    color: #faf0dc;
 }
 
 .accordion-title:hover {
-    background-color: #3ab4cc;
+    background-color: #ed7d2b;
 }
 
 .accordion-title,
@@ -21,11 +23,11 @@
 }
 
 .accordion-content {
-    background-color: #39b9d2;
+    background-color: #ed7d2b;
 }
 
 @media screen and (max-width: 700px) {
     .accordion {
-        width: 90%;
+        width: 50%;
     }
 }

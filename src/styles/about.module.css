@@ -1,3 +1,28 @@
-.about-us-header {
+section {
     padding: 1rem;
+}
+
+.about-us-header {
+    text-align: center;
+    color: #fff;
+    background-color: #2d235f;
+}
+
+.about-us-intro {
+    padding: 1rem;
+    background-color: #fff;
+}
+
+.about-us-map {
+    text-align: center;
+    padding: 4rem;
+}
+
+iframe {
+    border: none;
+}
+
+.about-us-accordion {
+    background-color: #fa9746;
+    padding-bottom: 3rem;
 }
